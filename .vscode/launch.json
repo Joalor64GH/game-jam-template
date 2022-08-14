@@ -1,21 +1,26 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-		{
-			"name": "Build + Debug",
-			"type": "lime",
-			"request": "launch"
-		},
-		{
-			"name": "Debug",
-			"type": "lime",
-			"request": "launch",
-			"preLaunchTask": null
-		},
-		{
-			"name": "Macro",
-			"type": "haxe-eval",
-			"request": "launch"
-		}
-	]
-}
+	  {
+		"name": "Windows",
+		"type": "hxcpp",
+		"preLaunchTask": "Build Windows",
+		"request": "launch",
+		"program": "${workspaceFolder}/export/windows/release/bin/game-jam-template.exe"
+	  },
+	  {
+		"name": "Linux",
+		"type": "hxcpp",
+		"preLaunchTask": "Build Linux",
+		"request": "launch",
+		"program": "${workspaceFolder}/export/linux/release/bin/game-jam-template"
+	  },
+	  {
+		"name": "Mac",
+		"type": "hxcpp",
+		"preLaunchTask": "Build Mac",
+		"request": "launch",
+		"program": "${workspaceFolder}/export/macos/release/bin/game-jam-template"
+	  },
+	],
+  }
